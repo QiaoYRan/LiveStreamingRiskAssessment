@@ -69,6 +69,10 @@
             Yiran Qiao et al.
           </p>
 
+          <p class="authors affiliation">
+            Institute of Computing Technology, CAS and ByteDance China
+          </p>
+
           <div class="venue-badges">
             <span class="tag venue-tag">KDD 2026</span>
             <span class="tag venue-tag">SIGIR 2026</span>
@@ -147,90 +151,102 @@
       <div class="container is-max-desktop">
         <h2 class="title is-3 section-title">Research Highlights</h2>
 
-        <details id="panel-live-or-lie" class="accordion-card">
-          <summary>1 Live or Lie</summary>
-          <div class="accordion-content">
-            <h3 class="title is-4">Live or Lie: Action-Aware Capsule MIL for Live Streaming Risk Assessment</h3>
-            <p class="highlight-brief">Understanding localized risk signals from complex interactions.</p>
-            <p><strong>Authors:</strong> Yiran Qiao et al.</p>
-            <span class="tag venue-tag">KDD 2026</span>
-            <div class="card-buttons mt-4">
-              <a class="button is-small is-rounded action-btn" href="#">Paper</a>
-              <a class="button is-small is-rounded action-btn" href="#">Code</a>
-            </div>
-            <figure class="image rounded-image mt-4">
-              <img src="./assets/images/live_or_lie_method.png" alt="Live or Lie method figure">
-            </figure>
-            <p class="mt-4">We model complex stream interactions through action-aware capsules to localize fine-grained risk evidence in noisy live environments.</p>
-            <p><strong>Key Contributions:</strong><br>• contribution 1<br>• contribution 2<br>• contribution 3</p>
-            <figure class="image rounded-image">
-              <img src="./assets/images/live_or_lie_results.png" alt="Live or Lie results figure">
-            </figure>
-            <pre><code>@inproceedings{qiao2026liveorlie,
-  title={Action-Aware Capsule MIL for Live Streaming Risk Assessment},
-  author={Qiao, Yiran and others},
-  booktitle={KDD},
-  year={2026}
-}</code></pre>
+        <article id="highlight-live-or-lie" class="highlight-card">
+          <p class="highlight-index">🧩 Live or Lie</p>
+          <h3 class="title is-4">Action-Aware Capsule MIL for Live Streaming Risk Assessment</h3>
+          <p class="highlight-brief">Understanding localized risk signals from complex interactions.</p>
+          <p><strong>Authors:</strong> Yiran Qiao et al.</p>
+          <span class="tag venue-tag">KDD 2026</span>
+          <div class="card-buttons mt-4">
+            <a class="button is-small is-rounded action-btn" href="https://dl.acm.org/doi/pdf/10.1145/3770854.3780246">Paper</a>
+            <a class="button is-small is-rounded action-btn" href="https://github.com/bytedance/AC-MIL">Code</a>
+            <a class="button is-small is-rounded action-btn" href="https://huggingface.co/datasets/ByteDance/LiveStreamingRiskControl" target="_blank" rel="noopener noreferrer">Dataset</a>
           </div>
-        </details>
+          <figure class="highlight-figure mt-4">
+            <img src="./static/images/1main.png" alt="AC-MIL framework for live streaming risk assessment">
+            <figcaption>AC-MIL: action-aware capsules with graph-aware relational reasoning and dual-view integration.</figcaption>
+          </figure>
+          <p class="mt-4">
+            Live-streaming risk often hides in long, noisy interaction sequences. We propose <strong>Action-aware Capsule Multiple Instance Learning (AC-MIL)</strong>, which organizes streamer–viewer behaviors into user–timeslot capsules and reasons over their relations for room-level risk detection under weak supervision.
+          </p>
+          <ul class="contribution-list">
+            <li><strong>Action Field Encoder</strong> encodes fine-grained action sequences into contextual action embeddings.</li>
+            <li><strong>Relational Capsule Reasoner</strong> uses graph-aware transformers with temporal, user, role-guided, and auxiliary masks.</li>
+            <li><strong>Dual-View Integrator</strong> fuses user-centric and temporal-centric perspectives into a unified room representation.</li>
+            <li><strong>Cross-Level Risk Decoder</strong> gates multi-level views for robust early risk prediction.</li>
+          </ul>
+          <pre><code>@inproceedings{qiao2026live,
+            title={Live or Lie: Action-Aware Capsule Multiple Instance Learning for Risk Assessment in Live Streaming Platforms},
+            author={Yiran Qiao, Jing Chen, Xiang Ao, Qiwei Zhong, Yang Liu, Qing He},
+            booktitle={Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V. 1},
+            pages={1182--1193},
+            year={2026}
+          }
+</code></pre>
+        </article>
 
-        <details id="panel-dejavu" class="accordion-card">
-          <summary>2 Deja Vu in Plots</summary>
-          <div class="accordion-content">
-            <h3 class="title is-4">Deja Vu in Plots: Retrieval-Augmented LLMs for Cross-Session Evidence</h3>
-            <p class="highlight-brief">Discovering recurring scripts through cross-session evidence.</p>
-            <p><strong>Authors:</strong> Yiran Qiao et al.</p>
-            <span class="tag venue-tag">SIGIR 2026</span>
-            <div class="card-buttons mt-4">
-              <a class="button is-small is-rounded action-btn" href="#">Paper</a>
-              <a class="button is-small is-rounded action-btn" href="#">Code</a>
-            </div>
-            <figure class="image rounded-image mt-4">
-              <img src="./assets/images/dejavu_method.png" alt="Deja Vu method figure">
-            </figure>
-            <p class="mt-4">We retrieve semantically related historical sessions and guide LLM reasoning to discover repeated risk scripts that single-session models miss.</p>
-            <p><strong>Key Contributions:</strong><br>• contribution 1<br>• contribution 2<br>• contribution 3</p>
-            <figure class="image rounded-image">
-              <img src="./assets/images/dejavu_results.png" alt="Deja Vu results figure">
-            </figure>
-            <pre><code>@inproceedings{qiao2026dejavu,
-  title={Retrieval-Augmented LLMs for Cross-Session Evidence},
-  author={Qiao, Yiran and others},
-  booktitle={SIGIR},
+        <article id="highlight-dejavu" class="highlight-card">
+          <p class="highlight-index">🔍 Deja Vu in Plots</p>
+          <h3 class="title is-4">Retrieval-Augmented LLMs for Cross-Session Evidence</h3>
+          <p class="highlight-brief">Discovering recurring scripts through cross-session evidence.</p>
+          <p><strong>Authors:</strong> Yiran Qiao, Xiang Ao, Jing Chen, Yang Liu, Qiwei Zhong, Qing He.</p>
+          <span class="tag venue-tag">SIGIR 2026</span>
+          <div class="card-buttons mt-4">
+            <a class="button is-small is-rounded action-btn" href="https://arxiv.org/pdf/2601.16027">Paper</a>
+            <a class="button is-small is-rounded action-btn" href="#">Code</a>
+            <a class="button is-small is-rounded action-btn" href="https://huggingface.co/datasets/ByteDance/LiveStreamingRiskControl" target="_blank" rel="noopener noreferrer">Dataset</a>
+          </div>
+          <figure class="highlight-figure mt-4">
+            <img src="./static/images/2main.png" alt="Retrieval-augmented LLM reasoning framework">
+            <figcaption>From PatchNet warmup to cross-session retrieval, LLM reasoning, and efficient distillation.</figcaption>
+          </figure>
+          <p class="mt-4">
+            Malicious live-streaming scripts often reappear across rooms with surface variations. We build a <strong>retrieval-augmented LLM framework</strong> that summarizes historical risk patches, retrieves cross-session evidence, and distills reasoning signals into an efficient PatchNet for deployment.
+          </p>
+          <ul class="contribution-list">
+            <li><strong>PatchNet</strong> models interaction patches with graph-aware attention over temporal, role, user, and auxiliary relations.</li>
+            <li><strong>Cross-Session Index</strong> stores LLM-generated semantic summaries of recurring risk evidence.</li>
+            <li><strong>Evidence-Integrated LLM Reasoning</strong> produces patch-level and session-level risk judgments with saliency.</li>
+            <li><strong>Cross-Granularity Distillation</strong> transfers LLM supervision to PatchNet for fast inference without retrieval overhead.</li>
+          </ul>
+          <pre><code>@inproceedings{qiao2026dejavu,
+  title={Deja Vu in Plots: Retrieval-Augmented LLMs for Cross-Session Evidence},
+  author={Yiran Qiao, Xiang Ao, Jing Chen, Yang Liu, Qiwei Zhong, Qing He},
+  booktitle={Proceedings of the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval},
   year={2026}
 }</code></pre>
-          </div>
-        </details>
+        </article>
 
-        <details id="panel-chameleon" class="accordion-card">
-          <summary>3 Outsmarting the Chameleon</summary>
-          <div class="accordion-content">
-            <h3 class="title is-4">Outsmarting the Chameleon: Counterfactual Decoupling for Tactical OOD Shifts</h3>
-            <p class="highlight-brief">Building robust models against evolving tactics.</p>
-            <p><strong>Authors:</strong> Yiran Qiao et al.</p>
-            <span class="tag venue-tag">KDD 2026</span>
-            <div class="card-buttons mt-4">
-              <a class="button is-small is-rounded action-btn" href="#">Paper</a>
-              <a class="button is-small is-rounded action-btn" href="#">Code</a>
-              <a class="button is-small is-rounded action-btn" href="https://huggingface.co/datasets/ByteDance/LiveStreamingRiskControl" target="_blank" rel="noopener noreferrer">Dataset</a>
-            </div>
-            <figure class="image rounded-image mt-4">
-              <img src="./assets/images/chameleon_method.png" alt="Chameleon method figure">
-            </figure>
-            <p class="mt-4">We separate stable intent factors from tactical surface shifts with counterfactual latent interventions for robust OOD risk assessment.</p>
-            <p><strong>Key Contributions:</strong><br>• contribution 1<br>• contribution 2<br>• contribution 3</p>
-            <figure class="image rounded-image">
-              <img src="./assets/images/chameleon_results.png" alt="Chameleon results figure">
-            </figure>
-            <pre><code>@inproceedings{qiao2026chameleon,
-  title={Counterfactual Decoupling for Tactical OOD Shifts},
-  author={Qiao, Yiran and others},
-  booktitle={KDD},
+        <article id="highlight-chameleon" class="highlight-card">
+          <p class="highlight-index">🦎 Outsmarting the Chameleon</p>
+          <h3 class="title is-4">Counterfactual Decoupling for Tactical OOD Shifts</h3>
+          <p class="highlight-brief">Building robust models against evolving tactics.</p>
+          <p><strong>Authors:</strong> Yiran Qiao, Jing Chen, Jiaqi Xu, Yang Liu, Qiwei Zhong, Xiang Ao.</p>
+          <span class="tag venue-tag">KDD 2026</span>
+          <div class="card-buttons mt-4">
+            <a class="button is-small is-rounded action-btn" href="#">Paper</a>
+            <a class="button is-small is-rounded action-btn" href="#">Code</a>
+            <a class="button is-small is-rounded action-btn" href="https://huggingface.co/datasets/ByteDance/LiveStreamingRiskControl" target="_blank" rel="noopener noreferrer">Dataset</a>
+          </div>
+          <figure class="highlight-figure mt-4">
+            <img src="./static/images/3main.png" alt="Counterfactual decoupling for tactical OOD shifts">
+            <figcaption>Intent–packaging disentanglement with counterfactual consistency and post-hoc calibration.</figcaption>
+          </figure>
+          <p class="mt-4">
+            Attackers frequently change surface tactics while preserving malicious intent. We introduce a <strong>counterfactual decoupling framework</strong> that separates intent from packaging in latent space and enforces consistency under tactical distribution shifts.
+          </p>
+          <ul class="contribution-list">
+            <li><strong>Latent Representation Disentanglement</strong> splits session embeddings into intent and packaging factors.</li>
+            <li><strong>Counterfactual Consistency Decoupling (CCD)</strong> aligns risky intent with counterfactual reconstructions at representation and prediction levels.</li>
+            <li><strong>Post-hoc Magnitude Calibration</strong> adapts packaging statistics at test time for evolving environments.</li>
+          </ul>
+          <pre><code>@inproceedings{qiao2026chameleon,
+  title={Outsmarting the Chameleon: Counterfactual Decoupling for Tactical OOD Shifts},
+  author={Yiran Qiao, Jing Chen, Jiaqi Xu, Yang Liu, Qiwei Zhong, Xiang Ao},
+  booktitle={Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V. 2},
   year={2026}
 }</code></pre>
-          </div>
-        </details>
+        </article>
       </div>
     </section>
 
@@ -249,10 +265,9 @@
   <footer class="footer footer-min">
     <div class="container is-max-desktop has-text-centered">
       <div class="footer-links">
-        <a href="#">Paper Links</a>
-        <a href="#">GitHub</a>
-        <a href="mailto:your_email@example.com">Email</a>
-        <a href="#">Google Scholar</a>
+
+        <a href="mailto:yrqiao@gmail.com">Email</a>
+     
       </div>
       <p class="is-size-7">Live Streaming Risk Assessment Research Line</p>
     </div>
